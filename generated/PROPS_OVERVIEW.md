@@ -791,7 +791,7 @@ export interface FabricationNoteTextProps extends PcbLayoutProps {
 
 export interface FiducialProps extends CommonComponentProps {
   soldermaskPullback?: Distance
-  padDiameter?: Distance
+  padDiameter: Distance
 }
 
 
@@ -1211,6 +1211,16 @@ export interface NonSubcircuitGroupProps extends BaseGroupProps {
 export interface OpAmpProps<PinLabel extends string = string>
   extends CommonComponentProps<PinLabel> {
   connections?: Connections<OpAmpPinLabels>
+}
+
+
+export interface OvalHoleProps extends PcbLayoutProps {
+  name?: string
+  shape: "oval"
+  width: Distance
+  height: Distance
+  solderMaskMargin?: Distance
+  coveredWithSolderMask?: boolean
 }
 
 
@@ -2027,7 +2037,11 @@ export interface SilkscreenGraphicProps {
   pcbOffsetY?: string | number
   pcbRotation?: string | number
   pcbPositionAnchor?: string
-  pcbPositionMode?: "relative_to_group_anchor" | "auto" | "relative_to_board_anchor" | "relative_to_component_anchor"
+  pcbPositionMode?:
+    | "relative_to_group_anchor"
+    | "auto"
+    | "relative_to_board_anchor"
+    | "relative_to_component_anchor"
   shouldBeOnEdgeOfBoard?: boolean
   pcbMarginTop?: string | number
   pcbMarginRight?: string | number

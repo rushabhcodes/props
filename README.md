@@ -686,7 +686,7 @@ export interface FabricationNoteTextProps extends PcbLayoutProps {
 ```ts
 export interface FiducialProps extends CommonComponentProps {
   soldermaskPullback?: Distance;
-  padDiameter?: Distance;
+  padDiameter: Distance;
 }
 ```
 
