@@ -44,13 +44,13 @@ test("should enforce correct types for transistor props", () => {
   expectTypeOf(rawProps).toMatchTypeOf<TransistorProps>()
 })
 
-test("should map transistor pin aliases to emitter base collector", () => {
+test("should map transistor pin aliases to collector base emitter", () => {
   expect(transistorPins).toEqual([
     "pin1",
-    "emitter",
+    "collector",
     "pin2",
     "base",
     "pin3",
-    "collector",
+    "emitter",
   ])
 })

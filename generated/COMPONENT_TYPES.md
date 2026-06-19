@@ -4142,11 +4142,11 @@ export const transistorProps = commonComponentProps.extend({
 })
 export const transistorPins = [
   "pin1",
-  "emitter",
+  "collector",
   "pin2",
   "base",
   "pin3",
-  "collector",
+  "emitter",
 ] as const
 ```
 
