@@ -4144,9 +4144,9 @@ export const transistorPins = [
   "pin1",
   "emitter",
   "pin2",
-  "collector",
-  "pin3",
   "base",
+  "pin3",
+  "collector",
 ] as const
 ```
 
